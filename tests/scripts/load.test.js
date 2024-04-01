@@ -7,15 +7,18 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 
 export function handleSummary(data) {
     return {
-        "smoke.test.html": htmlReport(data),
+        "load.test.html": htmlReport(data),
     };
 }
 
 export const options = {
-    vus: 5,
-    duration: "1m",
+    stages: [
+        { duration: "5m", target: 125 },
+        { duration: "5m", target: 125 },
+        { duration: "5m", target: 0 },
+    ],
     thresholds: {
-        http_req_duration: ["p(95)<2000"],
+        http_req_duration: ["p(95)<200"],
         http_req_failed: ["rate<0.01"],
     },
 };
