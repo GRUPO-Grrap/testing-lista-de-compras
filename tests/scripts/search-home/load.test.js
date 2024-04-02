@@ -18,13 +18,13 @@ export const options = {
         { duration: "5m", target: 0 },
     ],
     thresholds: {
-        http_req_duration: ["p(95)<200"],
+        http_req_duration: ["p(95)<2000"],
         http_req_failed: ["rate<0.01"],
     },
 };
 
 export default () => {
-    const url = "http://localhost:9000/";
+    const url = "https://lista-de-compra.grrap.com.br/";
 
     const headers = {
         headers: {

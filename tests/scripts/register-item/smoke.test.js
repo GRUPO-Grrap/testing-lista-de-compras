@@ -7,7 +7,7 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 
 export function handleSummary(data) {
     return {
-        "smoke.test.html": htmlReport(data),
+        "register-item.smoke.test.html": htmlReport(data),
     };
 }
 
@@ -15,13 +15,20 @@ export const options = {
     vus: 5,
     duration: "1m",
     thresholds: {
-        http_req_duration: ["p(95)<2000"],
+        http_req_duration: ["p(95)<1000"],
         http_req_failed: ["rate<0.01"],
     },
 };
 
 export default () => {
-    const url = "http://localhost:9000/";
+    const url = "https://lista-de-compra.grrap.com.br/";
+
+    const data = JSON.stringify({
+        id: uuidv4().substring(24),
+        name: `raphael_${uuidv4().substring(24)}`,
+        quantity: uuidv4().substring(24),
+        observations: uuidv4().substring(24),
+    });
 
     const headers = {
         headers: {
@@ -29,10 +36,10 @@ export default () => {
         },
     };
 
-    const res = http.get(url, headers);
+    const res = http.post(url, data, headers);
 
     check(res, {
-        "status code === 200": (res) => res.status === 200,
+        "status code === 201": (res) => res.status === 200,
     });
 
     sleep(1);

@@ -1,4 +1,4 @@
-# Casos de Teste - /
+# Casos de Teste - register-item
 
 <br>
 
@@ -8,9 +8,9 @@
 
 O objetivo deste teste é avaliar se o sistema funciona bem sob carga mínima.
 
-### CT001: Análise do Tempo de Resposta com um Baixo Número de Usuários Realizando Cadastros.
+### CT001: Análise do Tempo de Resposta com um Baixo Número de Usuários.
 
-Este teste tem como objetivo avaliar o tempo de resposta da API ao lidar com cargas de até **5** usuários virtuais (VUS) por segundo durante o período de **1 minuto**. É esperado que o **percentil de duração** seja abaixo de **500 milissegundos** em **95% das requisições** e que todas as **requisições (100%)** sejam realizadas.
+Este teste tem como objetivo avaliar o tempo de resposta da API ao lidar com cargas de até **5** usuários virtuais (VUS) por segundo durante o período de **1 minuto**. É esperado que o **percentil de duração** seja abaixo de **1000 milissegundos** em **95% das requisições** e que todas as **requisições (100%)** sejam realizadas.
 
 <br>
 
