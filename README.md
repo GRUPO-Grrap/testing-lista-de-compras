@@ -27,7 +27,7 @@ git clone https://github.com/GRUPO-Grrap/testing-lista-de-compras.git
 cd '.\tests\scripts\register-item'
 ```
 
-## 3. Lembre-se de instalar o K6:
+## 3. Lembre-se de instalar o k6:
 
 <a href="https://k6.io/docs/get-started/installation/"> Instalação do k6 </a>
 
