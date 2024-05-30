@@ -18,34 +18,28 @@ Passo-passo de como rodar o projeto:
 ## 1. Clone este repositório para o seu computador:
 
 ```bash
-git clone https://gitlab.com/rapha4085031/studies-journey.git
+git clone https://github.com/GRUPO-Grrap/testing-lista-de-compras.git
 ```
 
-## 2. Localize a seguinte branch:
+## 2. Navegue até o seguinte diretório:
 
 ```bash
-git checkout pb_sprint7
+cd '.\tests\scripts\register-item'
 ```
 
-## 3. Navegue até o seguinte diretório:
-
-```bash
-cd '\studies-journey\ServeRest\Tests'
-```
-
-## 4. Lembre-se de instalar o K6:
+## 3. Lembre-se de instalar o K6:
 
 <a href="https://k6.io/docs/get-started/installation/"> Instalação do k6 </a>
 
-## 5. Executando o Projeto
+## 4. Executando o Projeto
 
 Certifique-se de que a API foi configurada corretamente antes de tentar executar qualquer script de teste.
 
-## 6. Escolha um script de teste de sua preferência, lembrando que os scripts de teste têm a extensão "test.js".
+## 5. Escolha um script de teste de sua preferência, lembrando que os scripts de teste têm a extensão "test.js".
 
 Exemplo: "smoke.test.js".
 
-## 7. Execute o script com o seguinte comando no terminal:
+## 6. Execute o script com o seguinte comando no terminal:
 
 Antes de executar o comando, certifique-se de estar no mesmo diretório que o script selecionado, dentro do seu terminal.
 
